@@ -397,10 +397,10 @@ tr_TR:
       prev: "&lsaquo; Önceki"
       next: "Sonraki &rsaquo;"
       gap: "&hellip;"
-  password: Kelime
+  password: Şifre
   password_empty_notice: Şifre boş olamaz.
   password_reset_success: Şifre sıfırlandı.
-  password_different_notice: Parola Onayı eşleşmiyor.
+  password_different_notice: Şifreler eşleşmiyor.
   provider:
     google: Google
     office365: Office 365

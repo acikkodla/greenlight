@@ -16,7 +16,7 @@
 
 # Locale.
 
-tr_TR:
+tr:
   activerecord:
     attributes:
       user:
@@ -68,7 +68,7 @@ tr_TR:
       recording_visibility:
         info: Yeni kayıtlar için varsayılan kayıt görünürlüğünü ayarlama
         title: Varsayılan Görünürlük Kaydı
-        warning: Bu ayar yalnızca çalışmayan odalara uygulanır
+        warning: Bu ayar yalnızca çalışmayan e-toplantılara uygulanır
       registration:
         info: Kullanıcıların web sitesine kayıt olma şeklini değiştirin
         title: Kayıt Yöntemi
@@ -77,11 +77,11 @@ tr_TR:
           invite: Davete Katıl
           open: Kaydı Aç
       rooms:
-        info: Kullanıcının sahip olabileceği oda sayısını kısıtlar (Ana oda dahil). Bu ayar adminlere uygulanamaz.
-        title: Kullanıcı Başına Oda Sayısı
+        info: Kullanıcının sahip olabileceği canlı oturum sayısını kısıtlar (Ana oturum dahil). Bu ayar adminlere uygulanamaz.
+        title: Kullanıcı Başına e-toplantı Sayısı
       shared_access:
-        info: "Devre dışı ayarını seçmek oda seçenekleri düğmesini kaldırır, kullanıcıların odaları paylaşmasını önler"
-        title: Kullanıcıların odaları paylaşmasına olanak verir
+        info: "Devre dışı ayarını seçmek e-toplantı seçenekleri düğmesini kaldırır, kullanıcıların e-toplantıları paylaşmasını önler"
+        title: Kullanıcıların e-toplantıları paylaşmasına olanak verir
       subtitle: e-Toplantı'yı Özelleştir
       title: Site Ayarları
     flash:
@@ -106,35 +106,35 @@ tr_TR:
       title: Sunucu Kayıtları
       no_recordings: Bu sunucuda kayıt yok
     roles:
-      appear_in_share_list: Kullanıcıları odaları paylaşmaları için  bu rolle açılır listeye ekleyin
-      can_create_rooms: Odalar oluşturulabilir
+      appear_in_share_list: Kullanıcıları, e-toplantıları paylaşmaları için  bu rol ile açılır listeye ekleyin
+      can_create_rooms: Bu roldeki kullanıcılar, e-Toplantılar oluşturulabilir
       delete: Rolü sil
       invalid_create: Rol oluşturulurken hata oldu. Lütfen rol değerlerini yeniden kontrol ediniz.
       invalid_order: Rol önceliğini güncellerken hata oluştu. Lütfen değerleri kontrol edip yeniden deneyiniz.
       invalid_update: Role atanmış izinlerin güncellenmesinde bir hata oluştu. Lütfen değerleri kontrol edip yeniden deneyiniz.
-      manage_rooms_recordings: Bu role sahip kullanıcıların sunucu odalarını ve kayıtları yönetmesine izin ver
+      manage_rooms_recordings: Bu role sahip kullanıcıların sunucudaki e-toplantıları ve kayıtları yönetmesine izin ver
       name: Rol ismi
-      new_role: Rolü sil
+      new_role: Yeni Rol
       role_has_users: "Bu rol %{user_count} hesabına atanmıştır. silmeden önce lütfen tüm hesapları kaldırınız."
-      title: Roller
+      title: Rol Yönetimi
       promote_email: Bu rol atandığında kullanıcılara bir e-posta gönder
       demote_email: Bu rolden kaldırıldıklarında kullanıcılara bir e-posta gönder
       edit_site_settings: Bu roldeki kullanıcıların site ayarlarını düzenlemesine izin ver
-      edit_roles: Bu roldeki kullanıcıların site ayarlarını düzenlemesine izin ver
-      manage_users: Bu roldeki kullanıcıların kullanıcıları yönetmesine izin ver
+      edit_roles: Bu roldeki kullanıcıların, rol yönetimini düzenlemesine izin ver
+      manage_users: Bu roldeki kullanıcıların, kayıtlı kullanıcıları yönetmesine izin ver
       invalid_assignment: Kullanıcıya rolün atanmasında hata oluştu. Lütfen değerleri kontrol edip yeniden deneyiniz. 
       colour:
         title: Rol rengi
         info: Rolle ilişkilendirilecek rengi ayarlama
     rooms:
-      title: Sunucu Odaları
+      title: e-Toplantı Listesi
       table:
         id: Kimlik bilgisi
         not_running: Çalışmıyor
         running: Çalışıyor
         status: Durum
         view: Görünüm
-    title: Organizasyon ayarları
+    title: Panel Yönetimi
     users:
       invite: Kullanıcıyı davet et
       edit:
@@ -223,7 +223,7 @@ tr_TR:
   expired_reset_token: Şifre sıfırlama bağlantısının süresi doldu!
   features:
     title: Özellikler
-    rooms: Kişiselleştirilmiş Odalar
+    rooms: Kişiselleştirilmiş e-toplantılar
     recordings: Kayıt Yönetimi
     designs: Özel tasarımlar
     authentication: Kullanıcı doğrulama
@@ -238,12 +238,12 @@ tr_TR:
   header:
     all_recordings: Tüm Kayıtlar
     dropdown:
-      account_settings: organizasyon
+      account_settings: Panel Yönetimi
       help: "Yardıma mı ihtiyacınız var?"
-      home: Ev
-      settings: profil
+      home: e-Toplantı Panelim
+      settings: Hesap Ayarlarım
       signout: Oturumu Kapat
-  home_room: Ev Odası
+  home_room: Hazır e-toplantı oturumu
   info_update_success: Bilgi başarıyla güncellendi.
   invalid_credentials: "Girdiğiniz e-posta ve şifre kayıtlarımızla eşleşmedi. Parolanızı sıfırlamak için tekrar deneyin veya Parolanızı mı unuttunuz?"
   invalid_login_method: Hesap uyumsuzluğu nedeniyle giriş yapılamadı. OmniAuth ile giriş yapmalısınız
@@ -258,24 +258,24 @@ tr_TR:
     search:
       start: Armaya başla
   landing:
-    about: "e-Toplantı oturumlar düzenlemek için kendi odalarınızı oluşturabilir veya  kısa bir bağlantı göndererek katılmalarını sağlayabilirsiniz."
+    about: "e-Toplantı oturumları düzenlemek için kendi e-toplantılarınızı oluşturabilir veya  kısa bir bağlantı göndererek katılmalarını sağlayabilirsiniz."
     welcome: e-Toplantı'ya hoş geldiniz.
     video: e-Toplantı'yı kullanma hakkındaki eğitimimizi izleyin
     upgrade: 2.0'a nasıl yükselteceğimi göster!
     version: "e-Toplantı'nın yeni bir versiyonunu yayınladık, ancak veritabanınız uyumlu değil."
   language_default: Varsayılan (tarayıcı dili)
   ldap_error: LDAP sunucusuna bağlanılamadı. Lütfen env dosyasındaki LDAP konfigürasyonunuzu kontrol ediniz ve sunucunuzun çalıştığından emin olunuz
-  login: oturum aç
-  login_title: hesabınıza giriş yapın
+  login: Giriş yap
+  login_title: Hesabınıza giriş yapın
   mailer:
     user:
       approve:
         info: Hesabınız onaylandı.
-        signin: Kişisel odalarınıza erişmek için aşağıdaki butona tıklayın ve giriş yapın.
+        signin: Kişisel e-toplantılarınıza erişmek için aşağıdaki butona tıklayın ve giriş yapın.
         signin_link: Oturum aç
         signup:
           info: e-Toplantı'yı kullanmak için yeni bir kullanıcı kayıt oldu.
-          more-info: Kullanıcıların e-Toplantıya ulaşabilmeleri için organizasyon ayarlarında kullanıcının hesabını onaylamalısınız
+          more-info: Kullanıcıların e-Toplantıya ulaşabilmeleri için panel yönetiminden kullanıcının hesabını onaylamalısınız
           admins_link: Organizasyon Sayfasını Ziyaret Edin
           subject: Yeni e-Toplantı Kullanıcısı Kayıt Ol
           username: "Kullanıcı %{name} ismi ve %{email} e-posta adresi ile oturum açtı"
@@ -311,7 +311,7 @@ tr_TR:
         subtitle: "%{role} Hakları verildi"
       verify_email:
         welcome: " %{name}kişisel alanına hoş geldin!"
-        success: " %{bigbluebutton}kullanarak başkanlarıyla görüşmek için kendi odalarınızı oluşturabilir ve birlikte çalışabilirsiniz"
+        success: " %{bigbluebutton}kullanarak başkanlarıyla görüşmek için kendi e-toplantılarını oluşturabilir ve birlikte çalışabilirsiniz"
         username: "Kullanıcı adını% {Email}"
         verify: Hesabınızı doğrulamak için aşağıdaki butona tıklamanız yeterli.
         verify_text: 'Hesabınızı doğrulamak için %{url}linkine tıklayınız'
@@ -330,13 +330,13 @@ tr_TR:
       title: Yeni Rol Oluştur
     create_room:
       access_code: Giriş kodu
-      access_code_placeholder: İsteğe bağlı oda erişim kodu oluşturun
-      auto_join: Otomatik olarak odaya katıl
-      create: Oda yarat
-      free_delete: Bu odayı istediğiniz zaman silmekte özgür olacaksınız.
-      name_placeholder: Bir oda adı girin ...
-      not_blank: Oda adı boş bırakılamaz.
-      title: Yeni Oda Oluştur
+      access_code_placeholder: İsteğe bağlı e-toplantı erişim kodu oluşturun
+      auto_join: Otomatik olarak e-toplantıya katıl
+      create: Şimdi e-Toplantı Oluştur
+      free_delete: Bu e-toplantı istediğiniz zaman silmekte özgür olacaksınız.
+      name_placeholder: Bir e-toplantı adı girin ...
+      not_blank: e-Toplantı adı boş bırakılamaz.
+      title: Yeni e-Toplantı Oluştur
     delete_account:
       confirm: "Bu hesabı silmek istediğinize emin misiniz?"
       delete: Eminim bu hesabı sil.
@@ -344,10 +344,10 @@ tr_TR:
       delete_warning: Bu işlem kullanıcının hesabını etkinsizleştirir. Tüm etkinsizleştirilmiş kullanıcılar silinmiş sekmesi altında bulunabilir.
       warning: Bu son karardır. İlgili verileri <b>asla </b> geri kurtaramayacaksınız.
     delete_room:
-      confirm: " %{room} odasını silmek istediğinizden emin misiniz?"
-      delete: "Eminim, bu odayı silin."
+      confirm: " %{room} e-toplantısını silmek istediğinizden emin misiniz?"
+      delete: "Eminim, bu e-toplantıyı silin."
       keep: "İkinci kez düşününce, tutmaya karar verdim."
-      warning: Bu odası <b>asla</b> geri alamazsınız
+      warning: Bu e-toplantıyı <b>asla</b> geri alamazsınız
       recording_warning: "veya %{recordings_num} kaydı ile ilişkili kayıtların tümü"
     invite_user:
       email_placeholder: Kullanıcıların e-postalarını girin (virgülle ayrılmış)
@@ -360,24 +360,24 @@ tr_TR:
       forgot_password: "Parolanızı mı unuttunuz?"
     rename_recording:
     remove_shared:
-      title: "Bu odayı oda listenizden kaldırmak istediğinize emin misiniz?"
-      delete: "Eminim, odayı sil."
-      warning: Bu odaya <b>asla</b> tekrar ulaşamayacaksınız
+      title: "Bu e-toplantıyı, e-toplantı listenizden kaldırmak istediğinize emin misiniz?"
+      delete: "Eminim, e-toplantıyı sil."
+      warning: Bu e-toplantıyı <b>asla</b> tekrar ulaşamayacaksınız
     room_settings:
-      title: Oda ayarları
-      update: Oda Güncelleme
+      title: e-Toplantı ayarları
+      update: e-Toplantıyı Güncelle
       client: Kullanıcı türünü seçin
       join_moderator: Tüm kullanıcılar moderatör olarak katılır
       mute: Katıldıklarında kullanıcıları sustur
       require_approval: Katılmadan önce moderatör onayı iste
       start: Herhangi bir kullanıcının bu toplantıyı başlatmasına izin ver
-      footer_text: Odanızın ayarlarını herhangi bir zamanda yapabilrisiniz
+      footer_text: e-Toplantınızın ayarlarını herhangi bir zamanda yapabilrisiniz
     rename_room:
-      name_placeholder: Yeni bir oda adı girin ...
+      name_placeholder: Yeni bir e-toplantı adı girin ...
     share_access:
-      footer: "Bir kullanıcı ile odayı paylaşmak, odayı başlatabilmelerine ve odanın kayıtlarını görüntüleyebilmelerine izin verir"
-      list: ile paylaşılan
-      title: Odaya ulaşımı paylaş
+      footer: "Bir kullanıcı ile e-toplantıyı paylaşmak, e-toplantıyı başlatabilmelerine ve e-toplantının kayıtlarını görüntüleyebilmelerine izin verir"
+      list: ile e-toplanti erişim yetkilerimi paylaşıyorum
+      title: Erişim Yetkisini Paylaş
       save: Değişiklikleri kaydet
       cancel_changes: Değişikliklerden vazgeç
       select: Kullanıcıyı seç
@@ -387,8 +387,8 @@ tr_TR:
       title: Kullanıcı hesaplarını birleştir
       to: birincil hesap
       save: Birleştir
-      footer: Odada birleştirilecek olan hesaplar Birincil Hesabın oda listesi üzerinden transfer edilecek ve daha sonra hesap silinecektir.
-  name_update_success: Oda adı başarıyla değiştirildi!
+      footer: e-Toplantıda birleştirilecek olan hesaplar Birincil Hesabın e-toplantı listesi üzerinden transfer edilecek ve daha sonra hesap silinecektir.
+  name_update_success: e-Toplantı adı başarıyla değiştirildi!
   no_user_email_exists: Belirtilen e-postaya sahip mevcut bir kullanıcı yok. Lütfen doğru yazdığınızdan emin olun.
   omniauth_error: OmniAuth doğrulanırken bir hata oluştu. Lütfen sistem yöneticisi ile iletişime geçiniz!
   omniauth_specific_error: "%{error} OmniAuth doğrulanırken bir hata oluştu. Lütfen sistem yöneticisi ile iletişime geçiniz!"
@@ -397,10 +397,10 @@ tr_TR:
       prev: "&lsaquo; Önceki"
       next: "Sonraki &rsaquo;"
       gap: "&hellip;"
-  password: Kelime
+  password: Şifre
   password_empty_notice: Şifre boş olamaz.
   password_reset_success: Şifre sıfırlandı.
-  password_different_notice: Parola Onayı eşleşmiyor.
+  password_different_notice: Şifreler eşleşmiyor.
   provider:
     google: Google
     office365: Office 365
@@ -414,7 +414,7 @@ tr_TR:
     all_recordings: Tüm Kayıtlar
     email: E-posta Kaydı
     error: " %{count} kayıt(lar)ı okunurken bir hata oluştu"
-    no_recordings: "Bu odada %{inject}kaydı bulunmamaktadır."
+    no_recordings: "Bu e-toplantıda %{inject} henüz bir kayıt bulunmamaktadır."
     no_user_recordings: Şu anda hiç kaydınız yok.
     no_matched_recordings: "Aramanızla eşleşen %{inject} kaydı bulunamadı"
     recorded_on: " %{date}üzerine kaydedildi"
@@ -426,7 +426,7 @@ tr_TR:
       visibility: Görünürlük
       formats: Biçimleri
     visibility:
-      public: açık
+      public: Paylaşılmış
       unlisted: Liste dışı
     format:
       notes: Notlar
@@ -441,7 +441,7 @@ tr_TR:
     banned:
       fail: "Bu uygulamaya giriş izniniz bulunmamaktadır. Bunun bir hata olduğunu düşünüyorsanız, lütfen sistem yöneticinize başvurun." 
     deprecated:
-      new_signin: "Hesabınıza giriş için yeni bir yöntem seçin. Eski hesabınıza ait tüm odalar yeni hesabınıza aktarılacaktır. "
+      new_signin: "Hesabınıza giriş için yeni bir yöntem seçin. Eski hesabınıza ait tüm e-toplantılar yeni hesabınıza aktarılacaktır. "
       twitter_signin: "Twitter aracılığıyla girişler yeni sürümde kaldırılacaktır. Yeni hesap doğrulama yöntemi için  <a href=\"%{link}\"> buraya </a> tıklayınız."
       twitter_signup: Twitter aracılığıyla girişler yeni sürümde kaldırılmıştır. Yeni bir giriş yöntemi deneyiniz.
       merge_success: "Yeni Twitter hesabınızla eşleşme başarılı oldu. Eski Twitter hesabınız silindi. "
@@ -464,15 +464,15 @@ tr_TR:
     pending: Beklemede
     user: Kullanıcı
   room:
-    access_code_required: Lütfen odaya katılmak için geçerli bir erişim kodu girin
-    create_room: Oda Oluştur
-    create_room_error: Oda oluşturulurken bir hata oluştu
-    create_room_success: Oda başarıyla oluşturuldu
+    access_code_required: Lütfen e-toplantıya katılmak için geçerli bir erişim kodu girin
+    create_room: e-Toplantı Oluştur
+    create_room_error: e-Toplantı oluşturulurken bir hata oluştu
+    create_room_success: e-Toplantı başarıyla oluşturuldu
     delete:
-      home_room: Kullanıcının ana odası silinemiyor
-      success: Oda başarıyla silindi
-      fail: "(%{error}) odası silinemedi"
-    enter_the_access_code: Odanın erişim kodunu girin
+      home_room: Kullanıcının ana e-toplantısı silinemiyor
+      success: e-Toplantı başarıyla silindi
+      fail: "(%{error}) e-toplantısı silinemedi"
+    enter_the_access_code: e-Toplantının erişim kodunu girin
     invalid_provider: Geçersiz bir URL girdiniz. Lütfen URL’yi kontrol edip tekrar deneyin.
     invited: Katılmaya davet edildiniz
     invite_participants: Katılımcıları Davet Et
@@ -480,38 +480,38 @@ tr_TR:
     last_session: "%{session} da son oturum"
     login: Gir
     owner: Toplantı sahibi
-    owner_banned: bu oda şu anda uygun değil
+    owner_banned: bu e-toplantı şu anda uygun değil
     no_room:
-      description: Katılmak istediğiniz oda adını veya URL sini giriniz
+      description: Katılmak istediğiniz e-toplantı adını veya URL sini giriniz
       edit_profile: Kullanıcı Profilini Düzenle
-      go_to: Odaya git
-      invalid_room_uid: Girdiğiniz oda url'si / kullanıcı kimliği geçersizdi.
-      placeholder: Oda URL'si / kullanıcı kimliği
-      no_recent_rooms: Yakın zamanda katıldığınız odanız yok
-      recent_rooms: Yeni Katılan Bir Odaya Git
-      title: Bir Odaya Katılın
-    no_sessions: Bu odada henüz bir oturum yok!
-    recordings: Oda kayıtları
-    room_limit: İzin verilen maksimum oda sayısına ulaştınız
-    room_limit_exceeded: "İzin verilen maksimum oda sayısını aştınız. Bu odaya girebilmek için  %{difference} lütfen siliniz"
-    sessions: Oturumlar
-    settings: Oda ayarları
-    share: Girişi Yönet
+      go_to: e-Toplantıya git
+      invalid_room_uid: Girdiğiniz e-toplantı url'si / kullanıcı kimliği geçersizdi.
+      placeholder: e-Toplantı URL'si / kullanıcı kimliği
+      no_recent_rooms: Yakın zamanda katıldığınız e-toplantınız yok
+      recent_rooms: Yeni Katılan Bir e-toplantıya Git
+      title: Bir e-Toplantıya Katılın
+    no_sessions: Bu e-toplantıda henüz bir oturum yok!
+    recordings: e-Toplantı kayıtları
+    room_limit: İzin verilen maksimum e-toplantı sayısına ulaştınız
+    room_limit_exceeded: "İzin verilen maksimum e-toplantı sayısını aştınız. Bu e-toplantıya girebilmek için  %{difference} lütfen siliniz"
+    sessions: e-Toplantı oturumları
+    settings: e-Toplantı ayarları
+    share: Yetki Paylaş
     shared_by: "%{email} tarafından paylaşıldı"
-    remove_shared_access_success: Paylaşılan oda listenizden başarıyla silindi
-    remove_shared_access_error: Paylaşılan oda listenizden silinirken bir hata oluştu
-    shared_access_success: Oda başarıyla paylaşıldı
-    shared_access_error: Oda paylaşılırken bir hata oluştu
+    remove_shared_access_success: Paylaşılan e-toplantı listenizden başarıyla silindi
+    remove_shared_access_error: Paylaşılan e-toplantı listenizden silinirken bir hata oluştu
+    shared_access_success: e-Toplantı başarıyla paylaşıldı
+    shared_access_error: e-Toplantı paylaşılırken bir hata oluştu
     start: Başla
-    unavailable: Oda sahibinin e-postası doğrulanamadığından bu oda şimdilik kapalıdır
-    update_settings_error: Oda ayarları güncellenirken bir hata oluştu
-    update_settings_success: Oda ayarları başarıyla güncellendi
+    unavailable: e-Toplantı sahibinin e-postası doğrulanamadığından bu e-toplantı şimdilik kapalıdır
+    update_settings_error: e-Toplantı ayarları güncellenirken bir hata oluştu
+    update_settings_success: e-Toplantı ayarları başarıyla güncellendi
     wait:
-      message: Toplantı henüz başlamadı.
-      auto: Toplantı başladığında otomatik olarak katılacaksınız.
+      message: e-Toplantı henüz başlamadı.
+      auto: e-Toplantı başladığında otomatik olarak katılacaksınız.
   settings:
     account:
-      fullname: Reklam alanı
+      fullname: İsim Soyisim
       language: Dil
       provider: Sağlayıcı
       image: Görüntü
@@ -521,19 +521,19 @@ tr_TR:
       title: Hesap bilgisi
     delete:
       button: "Evet, hesabımı silmek istiyorum."
-      disclaimer: "Hesabınızı silerseniz <b>asla</b> geri alamazsınız. Hesabınıza ilişkin tüm bilgiler, ayarlar, odalar ve kayıtlar silinecektir."
+      disclaimer: "Hesabınızı silerseniz <b>asla</b> geri alamazsınız. Hesabınıza ilişkin tüm bilgiler, ayarlar, e-toplantılar ve kayıtlar silinecektir."
       subtitle: Hesabı Kalıcı Olarak Sil
       title: Hesabı sil
     password:
-      confirmation: Yeni parola onayı
+      confirmation: Yeni şifre tekrar
       new: Yeni Şifre
       old: Eski Şifre
       subtitle: Şifreni değiştir
-      title: Kelime
-    title: profil
+      title: Şifreni değiştir
+    title: Hesap Ayarlarım
     search: Ara
   signup:
-    password_confirm: Şifre onayı
+    password_confirm: Şifre onayı (şifreyi tekrar yazınız)
     subtitle: Hesap oluştur
     title: Hesap oluştur
     with: " %{provider} ile giriş yap"
